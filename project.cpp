@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <fstream>
 using namespace std;
 
 class PathNode{
@@ -312,23 +314,245 @@ void findShortestPath(Graph &campus, string start, string end){
     }
 }
 
+void reachableDFSHelper(BuildingNode *building, bool visited[], string names[], int count){
+    int index =-1;
+    for(int i=0; i<count;i++){
+        if(names[i] == building->name){
+            index = i;
+            break;
+        }
+    }
+
+    if(index == -1 || visited[index]){
+        return;
+    }
+
+    visited[index] = true;
+    cout<<building->name<<" ";
+    PathNode *adj = building->adjList;
+    while(adj != nullptr){
+        BuildingNode *nextBuilding = building->next;
+        BuildingNode *temp = building;
+        temp = building->next;
+        BuildingNode *b = nullptr;
+        BuildingNode *t = building;
+        t = building;
+        b = nullptr;
+
+        BuildingNode *curr = building;
+        while(curr != nullptr){
+            if(curr->name == adj->name){
+                b = curr;
+                break;
+            }
+            curr = curr->next;
+        }
+        if(b != nullptr){
+            reachableDFSHelper(b, visited, names, count);
+        }
+        adj = adj->next;
+    }
+}
+
+void reachableDFS(Graph &campus, string start){
+    int count =0;
+    BuildingNode *temp = campus.head;
+    while(temp != nullptr){
+        count++;
+        temp = temp->next;
+    }
+
+    if(count == 0){
+        return;
+    }
+
+    string *names = new string[count];
+    temp = campus.head;
+    for(int i=0; i<count; i++){
+        names[i] = temp->name;
+        temp = temp->next;
+    }
+
+    bool *visited = new bool[count];
+    for(int i=0;i<count; i++){
+        visited[i] = false;
+    }
+
+    BuildingNode *startNode = campus.head;
+    while(startNode != nullptr && startNode->name != start){
+        startNode = startNode->next;
+    }
+
+    if(startNode == nullptr){
+        cout<<"Building not found"<<endl;
+        return;
+    }
+
+    cout<<"Reachable buildings from "<<start<<" (DFS): ";
+    reachableDFSHelper(startNode, visited, names, count);
+    cout <<endl;
+
+}
+
+void safeToFile(Graph &campus, string fileName){
+    ofstream file(fileName);
+    if(!file){
+        cout << "Failed to open file" << fileName << endl;
+        return;
+    }
+
+    BuildingNode *temp = campus.head;
+
+    while(temp != nullptr){
+        file<<temp->name<<endl;
+        temp=temp->next;
+    }
+    file<<"END"<<endl;
+
+    temp = campus.head;
+    while(temp != nullptr){
+        PathNode* pathPtr = temp->adjList;
+        while(pathPtr != nullptr){
+            file<<temp->name<<" "<<pathPtr->name<<" "<<pathPtr->distance<<endl;
+            pathPtr = pathPtr->next;
+        }
+        temp = temp->next;
+    }
+    file<<"END"<<endl;
+
+    file.close();
+    cout<<"Data saved to "<< fileName<<" file"<<endl;
+}
+
+void loadFromFile(Graph &campus, string fileName){
+    ifstream file(fileName);
+
+    if(!file){
+        cout<<"Failed to open file"<<endl;
+        return;
+    }
+
+    campus.head = nullptr;
+    string line;
+    bool readingBuildings = true;
+
+    while(getline(file, line)){
+        if(line == "END"){
+            if(readingBuildings){
+                readingBuildings = false;
+            }else{
+                break;
+            }
+            continue;
+        }
+
+        if(readingBuildings){
+            addBuilding(campus, line);
+        }else{
+            string from = "";
+            string to = "";
+            string dist = "";
+            int i=0;
+
+            while(i<line.length() && line[i] != ' '){
+                from += line[i];
+                i++;
+            }
+            i++;
+            while(i<line.length()  && line[i] != ' '){
+                to += line[i];
+                i++;
+            }
+            i++;
+            while(i<line.length()){
+                dist += line[i];
+                i++;
+            }
+
+            int distance = stoi(dist);
+
+            addPath(campus, from, to, distance);
+        }
+    }
+
+    file.close();
+    cout<<"Data added for "<< fileName<<" file"<<endl;
+}
+
+
 int main() {
     Graph campus;
+    int choice;
+    string from, to, name, filename;
+    int dist;
 
-    addBuilding(campus, "CS_Block");
-    addBuilding(campus, "Library");
-    addBuilding(campus, "Admin");
-    addBuilding(campus, "Cafeteria");
+    while(1) {
+        cout<<endl;
+        cout<<"===== Campus Navigation System =====" << endl;
+        cout<<"1. Add Building" << endl;
+        cout<<"2. Add Path" << endl;
+        cout<<"3. Delete Building" << endl;
+        cout<<"4. Delete Path" << endl;
+        cout<<"5. Display Graph" << endl;
+        cout<<"6. Find Shortest Path (Dijkstra)" << endl;
+        cout<<"7. Show Reachable Buildings (DFS)" << endl;
+        cout<<"8. Save to File" << endl;
+        cout<<"9. Load from File" << endl;
+        cout<<"0. Exit" << endl;
+        cout<<"Enter choice: ";
+        cin >> choice;
 
-    addPath(campus, "CS_Block", "Library", 5);
-    addPath(campus, "CS_Block", "Admin", 10);
-    addPath(campus, "Library", "Admin", 7);
-    addPath(campus, "Library", "Cafeteria", 3);
-
-    displayGraph(campus);
-
-    cout << "\nFinding shortest path from CS_Block to Cafeteria...\n";
-    findShortestPath(campus, "CS_Block", "Cafeteria");
+        if(choice == 0) {
+            cout << "Exiting program..." << endl;
+            break;
+        }else if(choice == 1) {
+            cout << "Enter building name: ";
+            cin >> name;
+            addBuilding(campus, name);
+            cout << "Building added successfully.\n";
+        } else if (choice == 2) {
+            cout<< "Enter first building name: ";
+            cin>> from;
+            cout<< "Enter second building name: ";
+            cin>> to;
+            cout<< "Enter distance between them: ";
+            cin>> dist;
+            addPath(campus, from, to, dist);
+        }else if(choice == 3) {
+            cout<< "Enter building name to delete: ";
+            cin>> name;
+            deleteBuilding(campus, name);
+        }else if(choice == 4) {
+            cout<< "Enter first building name: ";
+            cin>> from;
+            cout<< "Enter second building name: ";
+            cin>> to;
+            deletePath(campus, from, to);
+        }else if(choice == 5) {
+            displayGraph(campus);
+        }else if(choice == 6) {
+            cout<< "Enter starting building: ";
+            cin>> from;
+            cout<< "Enter destination building: ";
+            cin>> to;
+            findShortestPath(campus, from, to);
+        }else if(choice == 7) {
+            cout<< "Enter starting building for DFS: ";
+            cin>> from;
+            reachableDFS(campus, from);
+        }else if(choice == 8) {
+            cout << "Enter filename to save data: ";
+            cin>> filename;
+            safeToFile(campus, filename);
+        }else if(choice == 9) {
+            cout<< "Enter filename to load data: ";
+            cin>> filename;
+            loadFromFile(campus, filename);
+        }else{
+            cout<< "Invalid choice. Try again." << endl;
+        }
+    }
 
     return 0;
 }
+

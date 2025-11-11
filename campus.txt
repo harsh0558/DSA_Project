@@ -1,0 +1,18 @@
+Library
+Cafeteria
+AdminBlock
+Auditorium
+Hostel
+Parking
+SportsComplex
+Entrance
+END
+Library Cafeteria 5
+Library AdminBlock 10
+Cafeteria Auditorium 3
+AdminBlock Auditorium 7
+Hostel Auditorium 4
+Hostel Parking 6
+Parking SportsComplex 8
+SportsComplex Entrance 5
+END
