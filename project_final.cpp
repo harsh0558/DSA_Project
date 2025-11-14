@@ -3,6 +3,24 @@
 #include <fstream>
 using namespace std;
 
+
+class Room {
+public:
+    string name;
+    int floor;
+    int capacity;
+    Room* next;
+
+    Room(string n, int f, int c, Room* nxt = nullptr){
+        name = n;
+        floor = f;
+        capacity = c;
+        next = nxt;
+    }
+};
+
+
+
 class PathNode{
 public:
     string name;
@@ -21,11 +39,13 @@ class BuildingNode{
 public:
     string name;
     PathNode *adjList;
+    Room *rooms;
     BuildingNode *next;
 
     BuildingNode(string n) {
         name = n;
         adjList = nullptr;
+        rooms = nullptr;
         next = nullptr;
     }
 };
@@ -38,6 +58,30 @@ public:
         head = nullptr;
     }
 };
+
+
+Room* findRoom(BuildingNode* building, string roomName){
+    Room* temp = building->rooms;
+    while(temp != nullptr){
+        if(temp->name == roomName){
+            return temp;
+        }
+        temp = temp->next;
+    }
+    return nullptr;
+}
+
+
+void addRoom(BuildingNode* building, string roomName, int floor, int capacity){
+    if(findRoom(building, roomName) != nullptr){
+        cout << "Room already exists in this building.\n";
+        return;
+    }
+    Room* newRoom = new Room(roomName, floor, capacity, building->rooms);
+    building->rooms = newRoom;
+    cout << "Room added successfully.\n";
+}
+
 
 BuildingNode* findBuilding(Graph &campus, string name){
     BuildingNode* temp = campus.head;
@@ -56,10 +100,10 @@ void addPath(Graph &campus, string from, string to, int dist){
     BuildingNode *b2 = findBuilding(campus,to);
 
     if(b1 == nullptr && b2 != nullptr){
-        cout<< from<<" buildng not found"<<endl;
+        cout<<from<<" buildng not found"<<endl;
         return;
     }else if(b1 != nullptr && b2 == nullptr){
-        cout<< to<<" buildng not found"<<endl;
+        cout<<to<<" buildng not found"<<endl;
         return;
     }else if(b1 == nullptr && b2 == nullptr){
         cout<<"buildings not found"<<endl;
@@ -97,10 +141,15 @@ void displayGraph(Graph &campus){
             cout<<adj->name<<" ("<<adj->distance<<") ";
             adj = adj->next;
         }
+        cout<<" | Rooms: ";
+        Room* r = temp->rooms;
+        while(r != nullptr){
+            cout<<r->name<<"(F"<<r->floor<<",C"<<r->capacity<<") ";
+            r = r->next;
+        }
         cout<<endl;
         temp = temp->next;
     }
-    
 }
 
 void removeEdge(BuildingNode *building, string name){
@@ -397,86 +446,119 @@ void reachableDFS(Graph &campus, string start){
 void safeToFile(Graph &campus, string fileName){
     ofstream file(fileName);
     if(!file){
-        cout << "Failed to open file" << fileName << endl;
+        cout << "Failed to open file " << fileName << endl;
         return;
     }
 
     BuildingNode *temp = campus.head;
 
     while(temp != nullptr){
-        file<<temp->name<<endl;
-        temp=temp->next;
+        file << temp->name << endl;
+        Room* r = temp->rooms;
+        while(r != nullptr){
+            file << "ROOM " << r->name << " " << r->floor << " " << r->capacity << endl;
+            r = r->next;
+        }
+        temp = temp->next;
     }
-    file<<"END"<<endl;
+    file << "END_BUILDINGS" << endl;
 
     temp = campus.head;
     while(temp != nullptr){
         PathNode* pathPtr = temp->adjList;
         while(pathPtr != nullptr){
-            file<<temp->name<<" "<<pathPtr->name<<" "<<pathPtr->distance<<endl;
+            file << temp->name << " " << pathPtr->name << " " << pathPtr->distance << endl;
             pathPtr = pathPtr->next;
         }
         temp = temp->next;
     }
-    file<<"END"<<endl;
+    file << "END_PATHS" << endl;
 
     file.close();
-    cout<<"Data saved to "<< fileName<<" file"<<endl;
+    cout<<"Data saved to "<< fileName <<" file successfully.\n";
 }
 
 void loadFromFile(Graph &campus, string fileName){
     ifstream file(fileName);
-
     if(!file){
-        cout<<"Failed to open file"<<endl;
+        cout<<"Failed to open file "<< fileName << endl;
         return;
     }
 
     campus.head = nullptr;
     string line;
-    bool readingBuildings = true;
+    BuildingNode* lastBuilding = nullptr;
 
     while(getline(file, line)){
-        if(line == "END"){
-            if(readingBuildings){
-                readingBuildings = false;
-            }else{
-                break;
-            }
-            continue;
-        }
+        if(line == "END_BUILDINGS") break;
+        if(line.rfind("ROOM", 0) == 0){
+            int space1 = line.find(' ', 5);
+            int space2 = line.find(' ', space1 + 1);
+            string roomName = line.substr(5, space1 - 5);
+            int floor = stoi(line.substr(space1 + 1, space2 - space1 - 1));
+            int capacity = stoi(line.substr(space2 + 1));
 
-        if(readingBuildings){
-            addBuilding(campus, line);
+            if(lastBuilding != nullptr){
+                addRoom(lastBuilding, roomName, floor, capacity);
+            }
         }else{
-            string from = "";
-            string to = "";
-            string dist = "";
-            int i=0;
-
-            while(i<line.length() && line[i] != ' '){
-                from += line[i];
-                i++;
-            }
-            i++;
-            while(i<line.length()  && line[i] != ' '){
-                to += line[i];
-                i++;
-            }
-            i++;
-            while(i<line.length()){
-                dist += line[i];
-                i++;
-            }
-
-            int distance = stoi(dist);
-
-            addPath(campus, from, to, distance);
+            addBuilding(campus, line);
+            lastBuilding = findBuilding(campus, line);
         }
     }
 
+    while(getline(file, line)){
+        if(line == "END_PATHS") break;
+        string from="", to="", distStr="";
+        int i=0;
+        while(i<line.length() && line[i] != ' '){
+            from += line[i]; i++;
+        }
+        i++;
+        while(i<line.length() && line[i] != ' '){
+            to += line[i]; i++;
+        }
+        i++;
+        while(i<line.length()){
+            distStr += line[i]; i++;
+        }
+        int distance = stoi(distStr);
+        addPath(campus, from, to, distance);
+    }
+
     file.close();
-    cout<<"Data added for "<< fileName<<" file"<<endl;
+    cout<<"Data loaded from "<< fileName <<" file successfully.\n";
+}
+
+
+void shortestPathBetweenRooms(Graph &campus, string room1, string room2){
+    BuildingNode *b1 = campus.head;
+    BuildingNode *b2 = campus.head;
+    BuildingNode *building1 = nullptr;
+    BuildingNode *building2 = nullptr;
+
+    while(b1 != nullptr){
+        if(findRoom(b1, room1) != nullptr){
+            building1 = b1;
+            break;
+        }
+        b1 = b1->next;
+    }
+    while(b2 != nullptr){
+        if(findRoom(b2, room2) != nullptr){
+            building2 = b2;
+            break;
+        }
+        b2 = b2->next;
+    }
+
+    if(building1 == nullptr || building2 == nullptr){
+        cout<<"One or both rooms not found in any building.\n";
+        return;
+    }
+
+    cout << "Finding shortest path between buildings of rooms " << room1 << " and " << room2 << "...\n";
+    findShortestPath(campus, building1->name, building2->name);
 }
 
 
@@ -484,7 +566,8 @@ int main() {
     Graph campus;
     int choice;
     string from, to, name, filename;
-    int dist;
+    int dist, floor, capacity;
+    string roomName1, roomName2;
 
     while(1) {
         cout<<endl;
@@ -494,10 +577,12 @@ int main() {
         cout<<"3. Delete Building" << endl;
         cout<<"4. Delete Path" << endl;
         cout<<"5. Display Graph" << endl;
-        cout<<"6. Find Shortest Path (Dijkstra)" << endl;
-        cout<<"7. Show Reachable Buildings (DFS)" << endl;
+        cout<<"6. Find Shortest Path" << endl;
+        cout<<"7. Show Reachable Buildings" << endl;
         cout<<"8. Save to File" << endl;
         cout<<"9. Load from File" << endl;
+        cout<<"10. Add Room to Building" << endl;
+        cout<<"11. Find Shortest Path Between Rooms" << endl;
         cout<<"0. Exit" << endl;
         cout<<"Enter choice: ";
         cin >> choice;
@@ -509,8 +594,7 @@ int main() {
             cout << "Enter building name: ";
             cin >> name;
             addBuilding(campus, name);
-            cout << "Building added successfully.\n";
-        } else if (choice == 2) {
+        } else if(choice == 2) {
             cout<< "Enter first building name: ";
             cin>> from;
             cout<< "Enter second building name: ";
@@ -548,6 +632,27 @@ int main() {
             cout<< "Enter filename to load data: ";
             cin>> filename;
             loadFromFile(campus, filename);
+        }else if(choice == 10){
+            cout << "Enter building name to add room: ";
+            cin >> name;
+            BuildingNode* b = findBuilding(campus, name);
+            if(b == nullptr){
+                cout << "Building not found.\n";
+            }else{
+                cout << "Enter room name: ";
+                cin >> roomName1;
+                cout << "Enter floor number: ";
+                cin >> floor;
+                cout << "Enter capacity: ";
+                cin >> capacity;
+                addRoom(b, roomName1, floor, capacity);
+            }
+        }else if(choice == 11){
+            cout << "Enter first room name: ";
+            cin >> roomName1;
+            cout << "Enter second room name: ";
+            cin >> roomName2;
+            shortestPathBetweenRooms(campus, roomName1, roomName2);
         }else{
             cout<< "Invalid choice. Try again." << endl;
         }
