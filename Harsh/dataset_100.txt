@@ -1,0 +1,653 @@
+Building_0
+ROOM Room_0_0 4 37
+ROOM Room_0_1 1 54
+ROOM Room_0_2 4 41
+Building_1
+ROOM Room_1_0 1 34
+ROOM Room_1_1 5 37
+Building_2
+ROOM Room_2_0 1 37
+ROOM Room_2_1 5 15
+Building_3
+ROOM Room_3_0 2 55
+ROOM Room_3_1 5 30
+Building_4
+ROOM Room_4_0 4 35
+ROOM Room_4_1 4 28
+ROOM Room_4_2 2 18
+ROOM Room_4_3 4 55
+ROOM Room_4_4 4 17
+Building_5
+ROOM Room_5_0 2 38
+ROOM Room_5_1 2 17
+ROOM Room_5_2 2 12
+Building_6
+ROOM Room_6_0 1 53
+ROOM Room_6_1 5 13
+ROOM Room_6_2 1 10
+Building_7
+ROOM Room_7_0 4 20
+ROOM Room_7_1 2 59
+ROOM Room_7_2 4 56
+ROOM Room_7_3 2 32
+ROOM Room_7_4 4 46
+Building_8
+ROOM Room_8_0 1 12
+ROOM Room_8_1 2 24
+ROOM Room_8_2 3 54
+ROOM Room_8_3 3 29
+ROOM Room_8_4 4 25
+Building_9
+ROOM Room_9_0 3 56
+ROOM Room_9_1 4 23
+ROOM Room_9_2 4 32
+ROOM Room_9_3 5 31
+Building_10
+ROOM Room_10_0 5 20
+ROOM Room_10_1 2 48
+ROOM Room_10_2 5 50
+ROOM Room_10_3 2 19
+Building_11
+ROOM Room_11_0 4 56
+ROOM Room_11_1 5 51
+ROOM Room_11_2 2 23
+ROOM Room_11_3 4 27
+ROOM Room_11_4 1 29
+Building_12
+ROOM Room_12_0 2 26
+ROOM Room_12_1 4 30
+ROOM Room_12_2 3 25
+ROOM Room_12_3 5 55
+Building_13
+ROOM Room_13_0 1 59
+ROOM Room_13_1 5 28
+ROOM Room_13_2 4 25
+ROOM Room_13_3 5 28
+ROOM Room_13_4 2 23
+Building_14
+ROOM Room_14_0 1 47
+ROOM Room_14_1 3 22
+ROOM Room_14_2 5 32
+ROOM Room_14_3 5 26
+ROOM Room_14_4 4 45
+Building_15
+ROOM Room_15_0 3 38
+ROOM Room_15_1 2 28
+ROOM Room_15_2 5 13
+ROOM Room_15_3 3 41
+ROOM Room_15_4 5 57
+Building_16
+ROOM Room_16_0 5 37
+ROOM Room_16_1 4 48
+ROOM Room_16_2 2 23
+ROOM Room_16_3 3 44
+Building_17
+ROOM Room_17_0 2 39
+ROOM Room_17_1 3 51
+ROOM Room_17_2 4 20
+ROOM Room_17_3 2 28
+ROOM Room_17_4 1 47
+Building_18
+ROOM Room_18_0 5 14
+ROOM Room_18_1 1 58
+Building_19
+ROOM Room_19_0 4 20
+ROOM Room_19_1 5 38
+ROOM Room_19_2 2 29
+Building_20
+ROOM Room_20_0 4 19
+ROOM Room_20_1 2 24
+ROOM Room_20_2 4 30
+ROOM Room_20_3 2 51
+ROOM Room_20_4 3 54
+Building_21
+ROOM Room_21_0 4 57
+ROOM Room_21_1 2 52
+ROOM Room_21_2 2 54
+Building_22
+ROOM Room_22_0 1 38
+ROOM Room_22_1 5 49
+ROOM Room_22_2 3 31
+ROOM Room_22_3 3 18
+ROOM Room_22_4 5 18
+Building_23
+ROOM Room_23_0 2 55
+ROOM Room_23_1 2 22
+ROOM Room_23_2 5 43
+ROOM Room_23_3 1 56
+Building_24
+ROOM Room_24_0 5 39
+ROOM Room_24_1 1 25
+ROOM Room_24_2 4 11
+ROOM Room_24_3 5 35
+ROOM Room_24_4 1 45
+Building_25
+ROOM Room_25_0 4 44
+ROOM Room_25_1 1 28
+Building_26
+ROOM Room_26_0 3 29
+ROOM Room_26_1 5 18
+ROOM Room_26_2 2 16
+ROOM Room_26_3 5 11
+ROOM Room_26_4 5 52
+Building_27
+ROOM Room_27_0 1 20
+ROOM Room_27_1 5 30
+ROOM Room_27_2 2 39
+ROOM Room_27_3 2 29
+ROOM Room_27_4 4 41
+Building_28
+ROOM Room_28_0 1 35
+ROOM Room_28_1 5 20
+Building_29
+ROOM Room_29_0 2 15
+ROOM Room_29_1 1 47
+ROOM Room_29_2 5 31
+ROOM Room_29_3 4 49
+ROOM Room_29_4 2 51
+Building_30
+ROOM Room_30_0 5 53
+ROOM Room_30_1 5 51
+ROOM Room_30_2 5 43
+ROOM Room_30_3 4 37
+Building_31
+ROOM Room_31_0 1 57
+ROOM Room_31_1 2 43
+ROOM Room_31_2 5 37
+Building_32
+ROOM Room_32_0 3 31
+ROOM Room_32_1 3 24
+Building_33
+ROOM Room_33_0 2 29
+ROOM Room_33_1 2 39
+Building_34
+ROOM Room_34_0 4 27
+ROOM Room_34_1 4 38
+Building_35
+ROOM Room_35_0 4 11
+ROOM Room_35_1 4 13
+ROOM Room_35_2 1 21
+ROOM Room_35_3 3 58
+Building_36
+ROOM Room_36_0 4 32
+ROOM Room_36_1 4 24
+ROOM Room_36_2 2 10
+ROOM Room_36_3 1 35
+ROOM Room_36_4 5 35
+Building_37
+ROOM Room_37_0 5 28
+ROOM Room_37_1 2 32
+ROOM Room_37_2 2 58
+ROOM Room_37_3 1 43
+Building_38
+ROOM Room_38_0 3 54
+ROOM Room_38_1 3 41
+Building_39
+ROOM Room_39_0 3 59
+ROOM Room_39_1 5 53
+ROOM Room_39_2 1 26
+ROOM Room_39_3 5 38
+ROOM Room_39_4 4 27
+Building_40
+ROOM Room_40_0 1 47
+ROOM Room_40_1 2 18
+Building_41
+ROOM Room_41_0 1 12
+ROOM Room_41_1 1 40
+ROOM Room_41_2 2 17
+Building_42
+ROOM Room_42_0 1 13
+ROOM Room_42_1 5 43
+ROOM Room_42_2 2 55
+Building_43
+ROOM Room_43_0 1 52
+ROOM Room_43_1 1 21
+ROOM Room_43_2 5 22
+ROOM Room_43_3 4 52
+ROOM Room_43_4 1 45
+Building_44
+ROOM Room_44_0 2 52
+ROOM Room_44_1 2 45
+Building_45
+ROOM Room_45_0 4 15
+ROOM Room_45_1 3 31
+ROOM Room_45_2 4 31
+ROOM Room_45_3 2 10
+Building_46
+ROOM Room_46_0 1 36
+ROOM Room_46_1 2 55
+Building_47
+ROOM Room_47_0 4 41
+ROOM Room_47_1 4 41
+ROOM Room_47_2 5 51
+Building_48
+ROOM Room_48_0 4 13
+ROOM Room_48_1 3 28
+ROOM Room_48_2 1 16
+Building_49
+ROOM Room_49_0 4 10
+ROOM Room_49_1 1 16
+ROOM Room_49_2 3 21
+Building_50
+ROOM Room_50_0 5 14
+ROOM Room_50_1 2 23
+ROOM Room_50_2 2 39
+ROOM Room_50_3 3 44
+Building_51
+ROOM Room_51_0 2 22
+ROOM Room_51_1 4 43
+ROOM Room_51_2 2 56
+Building_52
+ROOM Room_52_0 3 45
+ROOM Room_52_1 2 24
+Building_53
+ROOM Room_53_0 1 58
+ROOM Room_53_1 1 24
+ROOM Room_53_2 5 52
+ROOM Room_53_3 2 51
+ROOM Room_53_4 5 44
+Building_54
+ROOM Room_54_0 3 42
+ROOM Room_54_1 2 37
+ROOM Room_54_2 1 27
+Building_55
+ROOM Room_55_0 2 11
+ROOM Room_55_1 1 38
+ROOM Room_55_2 5 37
+ROOM Room_55_3 3 31
+ROOM Room_55_4 1 24
+Building_56
+ROOM Room_56_0 1 48
+ROOM Room_56_1 1 12
+ROOM Room_56_2 5 57
+ROOM Room_56_3 3 53
+Building_57
+ROOM Room_57_0 2 51
+ROOM Room_57_1 4 16
+ROOM Room_57_2 3 22
+ROOM Room_57_3 1 27
+Building_58
+ROOM Room_58_0 5 12
+ROOM Room_58_1 4 53
+ROOM Room_58_2 5 26
+ROOM Room_58_3 3 28
+Building_59
+ROOM Room_59_0 3 42
+ROOM Room_59_1 1 29
+ROOM Room_59_2 4 38
+ROOM Room_59_3 3 48
+ROOM Room_59_4 4 24
+Building_60
+ROOM Room_60_0 5 46
+ROOM Room_60_1 1 44
+ROOM Room_60_2 1 43
+Building_61
+ROOM Room_61_0 5 16
+ROOM Room_61_1 4 34
+ROOM Room_61_2 5 50
+ROOM Room_61_3 3 45
+Building_62
+ROOM Room_62_0 3 54
+ROOM Room_62_1 3 45
+ROOM Room_62_2 5 24
+ROOM Room_62_3 4 18
+ROOM Room_62_4 2 24
+Building_63
+ROOM Room_63_0 4 44
+ROOM Room_63_1 5 42
+Building_64
+ROOM Room_64_0 4 55
+ROOM Room_64_1 4 47
+ROOM Room_64_2 5 45
+Building_65
+ROOM Room_65_0 5 41
+ROOM Room_65_1 2 32
+Building_66
+ROOM Room_66_0 1 17
+ROOM Room_66_1 1 14
+Building_67
+ROOM Room_67_0 4 13
+ROOM Room_67_1 3 21
+ROOM Room_67_2 5 25
+Building_68
+ROOM Room_68_0 1 35
+ROOM Room_68_1 1 10
+Building_69
+ROOM Room_69_0 3 29
+ROOM Room_69_1 3 31
+ROOM Room_69_2 4 27
+Building_70
+ROOM Room_70_0 4 35
+ROOM Room_70_1 1 28
+ROOM Room_70_2 2 40
+Building_71
+ROOM Room_71_0 3 40
+ROOM Room_71_1 5 12
+ROOM Room_71_2 3 12
+ROOM Room_71_3 2 41
+Building_72
+ROOM Room_72_0 4 34
+ROOM Room_72_1 5 47
+Building_73
+ROOM Room_73_0 1 18
+ROOM Room_73_1 5 41
+Building_74
+ROOM Room_74_0 4 45
+ROOM Room_74_1 4 12
+ROOM Room_74_2 5 41
+ROOM Room_74_3 3 48
+ROOM Room_74_4 4 22
+Building_75
+ROOM Room_75_0 2 19
+ROOM Room_75_1 5 51
+ROOM Room_75_2 3 21
+ROOM Room_75_3 2 56
+Building_76
+ROOM Room_76_0 1 57
+ROOM Room_76_1 5 22
+Building_77
+ROOM Room_77_0 5 23
+ROOM Room_77_1 1 19
+ROOM Room_77_2 1 15
+Building_78
+ROOM Room_78_0 2 52
+ROOM Room_78_1 2 20
+Building_79
+ROOM Room_79_0 2 16
+ROOM Room_79_1 5 15
+ROOM Room_79_2 3 31
+ROOM Room_79_3 1 40
+Building_80
+ROOM Room_80_0 3 54
+ROOM Room_80_1 5 30
+ROOM Room_80_2 3 31
+ROOM Room_80_3 3 29
+Building_81
+ROOM Room_81_0 5 15
+ROOM Room_81_1 3 40
+ROOM Room_81_2 1 11
+ROOM Room_81_3 3 39
+Building_82
+ROOM Room_82_0 2 53
+ROOM Room_82_1 1 50
+Building_83
+ROOM Room_83_0 1 19
+ROOM Room_83_1 1 57
+ROOM Room_83_2 4 55
+Building_84
+ROOM Room_84_0 5 17
+ROOM Room_84_1 4 12
+ROOM Room_84_2 3 35
+Building_85
+ROOM Room_85_0 2 57
+ROOM Room_85_1 5 12
+ROOM Room_85_2 5 17
+ROOM Room_85_3 5 40
+ROOM Room_85_4 5 21
+Building_86
+ROOM Room_86_0 3 14
+ROOM Room_86_1 4 52
+ROOM Room_86_2 4 32
+ROOM Room_86_3 4 25
+ROOM Room_86_4 3 57
+Building_87
+ROOM Room_87_0 1 28
+ROOM Room_87_1 5 49
+Building_88
+ROOM Room_88_0 3 29
+ROOM Room_88_1 3 37
+Building_89
+ROOM Room_89_0 5 24
+ROOM Room_89_1 2 27
+ROOM Room_89_2 5 54
+ROOM Room_89_3 2 15
+Building_90
+ROOM Room_90_0 3 27
+ROOM Room_90_1 5 37
+ROOM Room_90_2 4 11
+ROOM Room_90_3 4 47
+ROOM Room_90_4 1 53
+Building_91
+ROOM Room_91_0 2 25
+ROOM Room_91_1 4 29
+ROOM Room_91_2 1 26
+ROOM Room_91_3 5 24
+ROOM Room_91_4 4 27
+Building_92
+ROOM Room_92_0 4 13
+ROOM Room_92_1 4 11
+ROOM Room_92_2 4 21
+ROOM Room_92_3 1 33
+Building_93
+ROOM Room_93_0 3 26
+ROOM Room_93_1 5 38
+ROOM Room_93_2 1 14
+ROOM Room_93_3 1 44
+Building_94
+ROOM Room_94_0 1 12
+ROOM Room_94_1 1 14
+ROOM Room_94_2 3 45
+Building_95
+ROOM Room_95_0 4 10
+ROOM Room_95_1 2 24
+Building_96
+ROOM Room_96_0 4 59
+ROOM Room_96_1 2 28
+ROOM Room_96_2 2 57
+ROOM Room_96_3 3 46
+ROOM Room_96_4 3 36
+Building_97
+ROOM Room_97_0 3 30
+ROOM Room_97_1 4 51
+ROOM Room_97_2 2 31
+ROOM Room_97_3 4 38
+ROOM Room_97_4 5 19
+Building_98
+ROOM Room_98_0 4 31
+ROOM Room_98_1 4 45
+Building_99
+ROOM Room_99_0 2 52
+ROOM Room_99_1 2 45
+ROOM Room_99_2 5 27
+END_BUILDINGS
+Building_76 Building_90 154
+Building_52 Building_69 90
+Building_80 Building_93 21
+Building_66 Building_81 162
+Building_21 Building_8 42
+Building_38 Building_42 134
+Building_47 Building_90 81
+Building_32 Building_52 24
+Building_16 Building_48 71
+Building_25 Building_22 13
+Building_44 Building_53 46
+Building_9 Building_66 197
+Building_55 Building_33 49
+Building_17 Building_67 201
+Building_72 Building_95 164
+Building_25 Building_80 83
+Building_27 Building_46 150
+Building_24 Building_19 157
+Building_47 Building_35 193
+Building_13 Building_12 158
+Building_59 Building_99 35
+Building_67 Building_0 34
+Building_91 Building_38 30
+Building_99 Building_59 44
+Building_98 Building_55 75
+Building_21 Building_4 195
+Building_19 Building_84 163
+Building_56 Building_13 117
+Building_62 Building_55 148
+Building_14 Building_20 170
+Building_13 Building_42 13
+Building_93 Building_32 51
+Building_90 Building_35 119
+Building_90 Building_39 149
+Building_44 Building_33 110
+Building_56 Building_52 123
+Building_54 Building_28 191
+Building_99 Building_20 52
+Building_49 Building_10 157
+Building_36 Building_10 157
+Building_89 Building_62 110
+Building_55 Building_60 108
+Building_99 Building_70 63
+Building_26 Building_34 208
+Building_32 Building_15 107
+Building_57 Building_34 185
+Building_13 Building_56 142
+Building_66 Building_98 114
+Building_25 Building_80 31
+Building_41 Building_3 144
+Building_55 Building_57 88
+Building_77 Building_60 24
+Building_46 Building_87 106
+Building_35 Building_98 203
+Building_95 Building_27 178
+Building_88 Building_59 185
+Building_19 Building_13 121
+Building_81 Building_11 144
+Building_78 Building_82 165
+Building_90 Building_53 32
+Building_65 Building_93 74
+Building_24 Building_6 52
+Building_2 Building_15 201
+Building_66 Building_60 121
+Building_95 Building_16 154
+Building_49 Building_54 165
+Building_43 Building_78 145
+Building_48 Building_67 99
+Building_41 Building_42 134
+Building_67 Building_63 22
+Building_57 Building_6 127
+Building_57 Building_35 64
+Building_17 Building_14 200
+Building_67 Building_33 151
+Building_3 Building_95 153
+Building_27 Building_53 185
+Building_14 Building_70 36
+Building_51 Building_95 51
+Building_17 Building_23 162
+Building_62 Building_18 93
+Building_60 Building_98 139
+Building_64 Building_88 44
+Building_98 Building_40 29
+Building_59 Building_72 92
+Building_60 Building_14 79
+Building_42 Building_35 44
+Building_78 Building_26 191
+Building_63 Building_95 144
+Building_2 Building_5 199
+Building_0 Building_52 38
+Building_70 Building_84 164
+Building_53 Building_21 76
+Building_48 Building_32 132
+Building_69 Building_49 77
+Building_80 Building_47 140
+Building_59 Building_73 143
+Building_93 Building_66 140
+Building_93 Building_34 131
+Building_36 Building_22 198
+Building_67 Building_59 90
+Building_24 Building_77 143
+Building_7 Building_49 69
+Building_68 Building_60 125
+Building_91 Building_47 192
+Building_1 Building_37 16
+Building_59 Building_21 117
+Building_69 Building_68 10
+Building_65 Building_7 22
+Building_93 Building_67 117
+Building_3 Building_82 144
+Building_26 Building_0 87
+Building_58 Building_55 116
+Building_17 Building_63 77
+Building_53 Building_83 123
+Building_14 Building_2 62
+Building_53 Building_18 94
+Building_29 Building_75 152
+Building_0 Building_57 101
+Building_25 Building_63 69
+Building_66 Building_59 49
+Building_0 Building_39 121
+Building_52 Building_64 181
+Building_45 Building_20 22
+Building_14 Building_83 11
+Building_81 Building_99 97
+Building_37 Building_46 28
+Building_67 Building_52 133
+Building_52 Building_71 144
+Building_80 Building_19 88
+Building_87 Building_48 20
+Building_23 Building_43 46
+Building_2 Building_46 147
+Building_35 Building_30 170
+Building_7 Building_85 17
+Building_43 Building_51 197
+Building_85 Building_56 176
+Building_81 Building_22 106
+Building_24 Building_60 174
+Building_33 Building_60 156
+Building_95 Building_89 164
+Building_39 Building_58 48
+Building_34 Building_75 98
+Building_82 Building_24 175
+Building_2 Building_20 159
+Building_91 Building_51 185
+Building_66 Building_59 87
+Building_66 Building_44 120
+Building_40 Building_72 170
+Building_30 Building_89 171
+Building_0 Building_18 83
+Building_73 Building_29 198
+Building_10 Building_65 140
+Building_34 Building_28 141
+Building_61 Building_74 141
+Building_30 Building_36 180
+Building_33 Building_74 69
+Building_72 Building_95 82
+Building_24 Building_57 31
+Building_45 Building_31 174
+Building_97 Building_75 197
+Building_29 Building_16 162
+Building_25 Building_62 101
+Building_27 Building_12 117
+Building_35 Building_73 150
+Building_25 Building_0 155
+Building_79 Building_44 85
+Building_91 Building_97 123
+Building_90 Building_73 112
+Building_29 Building_68 199
+Building_97 Building_64 183
+Building_25 Building_27 138
+Building_67 Building_17 100
+Building_74 Building_30 95
+Building_16 Building_45 63
+Building_71 Building_27 138
+Building_17 Building_97 147
+Building_54 Building_41 168
+Building_79 Building_80 17
+Building_29 Building_90 129
+Building_62 Building_22 149
+Building_17 Building_62 181
+Building_51 Building_78 115
+Building_8 Building_98 161
+Building_30 Building_94 195
+Building_29 Building_37 59
+Building_53 Building_81 189
+Building_24 Building_64 182
+Building_47 Building_39 77
+Building_45 Building_28 54
+Building_7 Building_86 38
+Building_99 Building_97 170
+Building_55 Building_51 96
+Building_75 Building_31 70
+Building_50 Building_1 192
+Building_14 Building_15 130
+Building_24 Building_29 160
+Building_49 Building_46 173
+Building_22 Building_80 93
+Building_72 Building_76 175
+Building_55 Building_76 103
+END_PATHS
